@@ -2,6 +2,7 @@ from .models import Promo_code
 from .serializers import Promo_Serializer
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
+from django.contrib import messages
 import logging
 
 @api_view(['GET'])
@@ -18,7 +19,9 @@ def promo_code(request , code_redeem) :
     data = Promo_Serializer(redeem).data
     return Response({'data' : data})
 
-
+def messages():
+    if promo_code.response.status_code == 200:
+        messages.success(response , "Succeded Retreival")
 
 logger = logging.getLogger(__name__)
 def log_request(request):
