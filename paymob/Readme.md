@@ -18,7 +18,8 @@ This project is implementing rest api to make a promo code redemption.
 </ol>
 
 ## EndPoint:
-Method Get : Retreive all the data of the promocode with the promocode value
+Method Get : Retreive all the data of the promocode with the promocode value.
+You can find it with a documentation for the api.
 
 ## Use Case Example:
 In Transaction table: 
